@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>angular-index</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="js/angular-1.0.1.min.js"></script>
+</head>
+<body>
+	<div ng-app="classroomApp" ng-controller="classroom">
+		我们{{name}}的班级，有{{girls}}个女孩，{{boys}}个男孩，总共{{number}}人。
+	</div>
+<script>
+var app = angular.module('classroomApp',[]);
+app.controller('classroom',function($scope){
+	$scope.name = "三年级二班";
+	$scope.number = 41;
+	$scope.boys = 20;
+	$scope.girls = 21;
+});
+
+</script>
+</body>
+</html>
